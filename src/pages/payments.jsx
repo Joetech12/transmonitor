@@ -1,7 +1,7 @@
 import React from "react";
 
-const AllPayments = () => {
-  return <div>Payments</div>;
+const AllPaymentsPage = () => {
+  return <div>Teams Page</div>;
 };
 
-export default AllPayments;
+export default AllPaymentsPage;

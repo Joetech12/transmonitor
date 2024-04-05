@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        secondaryRegular: ["Roboto-Regular"],
-        secondaryBlack: ["Roboto-Black"],
         primaryRegular: ["Segoe-Regular"],
+        secondaryRegular: ["Roboto-Regular"],
+        secondaryBold: ["Roboto-Bold"],
+        secondaryBlack: ["Roboto-Black"],
       },
     },
   },

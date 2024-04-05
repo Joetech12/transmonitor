@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Overview from "../pages/overview";
-import AllPayments from "../pages/payments";
+import AllPaymentsPage from "../pages/payments";
 
 const CustomRoutes = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const CustomRoutes = createBrowserRouter([
       },
       {
         path: "/payments",
-        element: <AllPayments />,
+        element: <AllPaymentsPage />,
       },
     ],
   },

@@ -22,10 +22,14 @@ const Navbar = () => {
           <p className='text-[14px] '>Support</p>
           <p className='text-[14px]'>FAQ</p>
           <div className='relative'>
-            <div className='bg-primary absolute top-[-5px] right-[-1px] rounded-full h-[15px] w-[15px] flex justify-center items-center'>
+            <div className='bg-primary absolute top-[-5px] right-[-5px] rounded-full h-[15px] w-[15px] flex justify-center items-center'>
               <p className='text-[10px] text-white'>8</p>
             </div>
-            <HiOutlineBell className='text-[#647787] h-[24px] w-[24px]' />
+            <img
+              src={`/images/bell_icon.png`}
+              alt=''
+              className='w-[18px] h-fit object-cover'
+            />
           </div>
           <div className='flex items-center space-x-[12px]'>
             <div className='flex flex-col items-end'>
@@ -34,7 +38,7 @@ const Navbar = () => {
             </div>
             <div className='avatar'>
               <div className='w-[36px] rounded-full'>
-                <img src='/public/avatar.png' />
+                <img src='/images/avatar.png' />
               </div>
             </div>
           </div>
