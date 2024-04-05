@@ -1,13 +1,12 @@
-
+import { RouterProvider } from "react-router-dom";
+import CustomRoutes from "./routes";
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className="text-3xl text-red-500">Hello</h1>
-    </>
-  )
+   
+    <RouterProvider router={CustomRoutes} />
+  );
 }
 
-export default App
+export default App;
