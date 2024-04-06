@@ -8,7 +8,7 @@ const DashboardLayout = () => {
     <div>
       <Navbar />
       <div className='grid grid-cols-[100px_1fr] md:grid-cols-[250px_1fr] min-h-screen mt-[60px]'>
-        <FullSideBar />
+          <FullSideBar />
         <div className='pt-[33px] pl-[20px] md:pl-[30px] pr-[30px] lg:pr-[80px] pb-[50px]'>
           <Outlet />
         </div>
