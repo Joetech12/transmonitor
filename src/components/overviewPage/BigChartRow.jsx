@@ -42,10 +42,10 @@ const BigChartRow = () => {
             </div>
           </div>
         </div>
-        <div className='w-full'>
+        <div className='w-full xl:min-w-[689px]'>
           {showChart ? (
             <img
-              src='/images/big_chart.png'
+              src={BigChart}
               className='object-contain w-[689px] xl:w-auto h-auto xl:h-[236.96px]'
               alt=''
             />
