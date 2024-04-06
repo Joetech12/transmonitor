@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className='bg-white flex justify-center w-full shadow-md fixed top-0 z-[9999] drawer'>
       <input id='my-drawer-3' type='checkbox' className='drawer-toggle' />
-      <div className='drawer-content h-[60px]  ml-[30px] mr-[30px] lg:mr-[80px] w-full'>
+      <div className='drawer-content h-[60px]  ml-[10px] md:ml-[30px] mr-[10px] md:mr-[80px] w-full'>
         <div className='flex items-center justify-between navbar'>
           {/* Left */}
           <div className='flex items-center navbar-start'>

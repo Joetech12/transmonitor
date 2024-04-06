@@ -1,4 +1,5 @@
 import BigChartRow from "../components/overviewPage/BigChartRow";
+import PaymentRow from "../components/overviewPage/PaymentRow";
 import TransactionRow from "../components/overviewPage/TransactionRow";
 
 const Overview = () => {
@@ -7,6 +8,8 @@ const Overview = () => {
       {/* Transaction rows */}
       <TransactionRow />
       <BigChartRow />
+
+      <PaymentRow />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BigChart from "../../../public/images/big_chart.png";
+import BigChart from "/images/big_chart.png";
 
 import SmallProgressCard from "./SmallProgressCard";
 
