@@ -3,11 +3,13 @@ import BigChart from "/images/big_chart.png";
 
 import SmallProgressCard from "./SmallProgressCard";
 import { MdKeyboardArrowDown } from "react-icons/md";
-
-console.log({ BigChart });
+import MyCustomSelect from "../inputs/MyCustomSelect/MyCustomSelect";
+import { dateOptions } from "../../dummyDatas/inputData";
 
 const BigChartRow = () => {
   const [showChart, setShowChart] = useState(false);
+
+  const [selectValue, setSelectValue] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,10 +26,20 @@ const BigChartRow = () => {
             Today: 5, Aug 2018
           </p>
           <div className='flex items-center space-x-[39.23px]'>
-            <div className='flex items-center justify-between w-[135px] border-[2px] h-[31px] rounded-[2px] px-[11px] py-[10px] cursor-pointer'>
+            {/* <div className='flex items-center justify-between w-[135px] border-[2px] h-[31px] rounded-[2px] px-[11px] py-[10px] cursor-pointer'>
               <p className='text-[12px]'>1 Jan - 1 Jun</p>
               <MdKeyboardArrowDown className='text-[16px] text-[#CCCFD4] ' />
-            </div>
+            </div> */}
+            <MyCustomSelect
+              value={selectValue}
+              setValue={setSelectValue}
+              options={dateOptions}
+              defaultValue={dateOptions[1]}
+              icon={
+                <MdKeyboardArrowDown className='text-[16px] text-[#CCCFD4]' />
+              }
+              styles='w-[135px] h-[31px] rounded-[4.25px] pl-[11px] pr-[13px]'
+            />
             <div className='flex items-center space-x-[13.28px]'>
               <div className='flex justify-center items-center border bg-gradient-to-t from-[#F2F4F7] hover:from-[#e1e2e5] to-white border-[#CED0DA] rounded-[4px] h-[22.97px] w-[29.36px] cursor-pointer'>
                 <img

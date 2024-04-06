@@ -14,16 +14,16 @@ const Navbar = () => {
             >
               TransMonitor
             </Link>
-            <div className='lg:items-center hidden lg:flex'>
+            <div className='lg:items-center hidden lg:flex border rounded-[2px] border-white hover:border-black/10 relative duration-300'>
               <img
                 src={`/images/search_icon.png`}
                 alt=''
-                className='w-[14px] h-fit object-cover mr-[-25px] z-[10]'
+                className='w-[14px] h-fit object-cover z-[10] absolute left-2 '
               />
               <input
                 type='text'
                 placeholder='Search...'
-                className='input input-ghost w-[200px]  xl:w-[300px] h-[30px] outline-none active:outline-none pl-[40px]'
+                className='w-[200px] text-[13px] bg-white xl:w-[300px] h-[30px] outline-none appearance-none active:outline-none pl-[36px]'
               />
             </div>
           </div>
