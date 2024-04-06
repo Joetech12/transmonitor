@@ -55,7 +55,7 @@ const PaymentRow = () => {
     return () => clearTimeout(timerId); // Cleanup function to clear the timeout
   }, [searchValue]);
 
-  console.log({ selectValue, newArray, searchValue });
+  // console.log({ selectValue, newArray, searchValue });
 
   return (
     <div className=' mt-[43px]'>

@@ -57,7 +57,7 @@ const BigChartRow = () => {
     setIndexValue(chartIndex);
   }, []);
 
-  console.log({ fg: chartIndex, indexValue });
+  // console.log({ fg: chartIndex, indexValue });
 
   return (
     <div className='flex flex-col mt-[27px] space-y-[20px] xl:space-y-[0] xl:flex-row xl:items-center xl:space-x-[4px]'>
