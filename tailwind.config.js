@@ -19,9 +19,19 @@ export default {
         mytheme: {
           primary: "#1875F0",
           secondary: "#27AE60",
-          accent: "#FDC203",
+          // tertiary: "#EBC315",
+          accent: "#EBC315",
+          // accent: "#4F4F4F",
           neutral: "#647787",
           "base-100": "#F7F8FA",
+          "base-200": "#4F4F4F",
+
+          "--input-size-md": "33px",
+
+          ".btn": {
+            height: "var(--input-size-md)",
+            "min-height": "var(--input-size-md)",
+          },
         },
       },
       "light",

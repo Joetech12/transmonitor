@@ -28,3 +28,7 @@
 body {
   @apply bg-base-100 font-primaryRegular text-neutral;
 }
+
+.btn {
+  @apply h-[20px];
+}

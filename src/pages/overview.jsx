@@ -1,9 +1,14 @@
-import React from 'react'
+import BigChartRow from "../components/overviewPage/BigChartRow";
+import TransactionRow from "../components/overviewPage/TransactionRow";
 
 const Overview = () => {
   return (
-    <div>overview page</div>
-  )
-}
+    <div>
+      {/* Transaction rows */}
+      <TransactionRow />
+      <BigChartRow />
+    </div>
+  );
+};
 
-export default Overview
+export default Overview;

@@ -1,7 +1,7 @@
 import React from "react";
 
 const AllPaymentsPage = () => {
-  return <div>Teams Page</div>;
+  return <div>All Payments Page</div>;
 };
 
 export default AllPaymentsPage;

@@ -25,13 +25,13 @@ const MenuItem = ({ title, iconName, href }) => {
             |
           </div>
 
-          <div className='px-[0px] flex items-center space-x-[14.86px] ml-[38px]'>
+          <div className='px-[0px] flex items-center space-x-[14.86px] ml-[20px] md:ml-[38px]'>
             <img
               src={`/images/${iconName}`}
               alt=''
               className='w-[17px] h-fit object-cover'
             />
-            <p className='text-[11px]'>{title}</p>
+            <p className='text-[11px] hidden md:block'>{title}</p>
           </div>
         </div>
       </Link>

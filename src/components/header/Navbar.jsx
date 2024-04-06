@@ -8,30 +8,37 @@ const Navbar = () => {
         <div className='flex items-center justify-between navbar'>
           {/* Left */}
           <div className='flex items-center navbar-start'>
-            <p className='text-[24px] font-secondaryBlack text-primary mr-[100px]'>
+            <Link
+              to='/'
+              className='text-[24px] font-secondaryBlack text-primary mr-[100px] cursor-pointer'
+            >
               TransMonitor
-            </p>
+            </Link>
             <div className='lg:items-center hidden lg:flex'>
               <img
                 src={`/images/search_icon.png`}
                 alt=''
-                className='w-[12px] h-fit object-cover '
+                className='w-[14px] h-fit object-cover mr-[-25px] z-[10]'
               />
               <input
                 type='text'
                 placeholder='Search...'
-                className='input input-ghost w-full max-w-xs'
+                className='input input-ghost w-[200px]  xl:w-[300px] h-[30px] outline-none active:outline-none pl-[40px]'
               />
             </div>
           </div>
           {/* right */}
           <div className='flex items-center navbar-end '>
             <div className='hidden lg:flex lg:items-center'>
-              <p className='text-[14px] mr-[36.66px]'>Support</p>
-              <p className='text-[14px] mr-[55px]'>FAQ</p>
+              <p className='text-[14px] mr-[36.66px] cursor-pointer hover:font-bold'>
+                Support
+              </p>
+              <p className='text-[14px] mr-[55px] cursor-pointer hover:font-bold'>
+                FAQ
+              </p>
               {/* notification */}
-              <div className='relative mr-[48px]'>
-                <div className='bg-primary absolute top-[-5px] right-[-5px] rounded-full h-[15px] w-[15px] flex justify-center items-center'>
+              <div className='relative mr-[48px] cursor-pointer group'>
+                <div className='bg-primary group-hover:bg-primary/80 absolute top-[-5px] right-[-5px] rounded-full h-[15px] w-[15px] flex justify-center items-center'>
                   <p className='text-[10px] text-white'>8</p>
                 </div>
                 <img
@@ -40,8 +47,8 @@ const Navbar = () => {
                   className='w-[18px] h-fit object-cover'
                 />
               </div>
-              <div className='flex items-center space-x-[12px]'>
-                <div className='flex flex-col items-end'>
+              <div className='flex items-center space-x-[12px] cursor-pointer group'>
+                <div className='flex flex-col items-end group-hover:font-bold'>
                   <p className='text-[10px]'>Hello</p>
                   <p className='text-[14px] mt-[-5px]'>Oluwaleke Ojo</p>
                 </div>
@@ -82,15 +89,16 @@ const Navbar = () => {
             className={` menu p-4 w-[250px] md:w-[400px] h-[100vh] overflow-auto bg-base-100 md:text-[16px] flex flex-col space-y-[10px] md:space-y-[15px]`}
           >
             <li onClick={() => {}}>
+              <div className='btn btn-secondary md:btn-wide font-secondaryBold tracking-[0.2px] rounded-[30px] text-[12px] text-white  w-[163px] mt-[30px]'>
+                GENERATE INVOICE
+              </div>
+            </li>
+            {/* <li onClick={() => {}}>
               <Link to='/' className=''>
                 Overview
               </Link>
             </li>
-            <li>
-              <Link to='/payments' className=''>
-                All Payments
-              </Link>
-            </li>
+           */}
           </ul>
         </div>
       </div>

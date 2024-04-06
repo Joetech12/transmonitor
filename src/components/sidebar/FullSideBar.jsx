@@ -1,16 +1,15 @@
-import React from "react";
 import MenuItem from "./MenuItem";
 
 const FullSideBar = () => {
   return (
     <div className='h-full bg-white shadow-md pt-[33px] '>
-      <div className='ml-[30px] btn btn-secondary font-secondaryBold tracking-[0.2px] rounded-[30px] text-[12px] h-[33px] text-white  w-[163px]'>
+      <div className='ml-[30px] btn btn-secondary font-secondaryBold tracking-[0.2px] rounded-[30px] text-[12px] text-white  w-[163px] hidden lg:flex'>
         GENERATE INVOICE
       </div>
 
       {/* main section */}
-      <div className='mt-[32px] mb-[35px]'>
-        <p className='text-[11px] ml-[42px]'>Main</p>
+      <div className='lg:mt-[32px] mb-[35px]'>
+        <p className='text-[11px] ml-[20px] md:ml-[42px]'>Main</p>
 
         <ul className='pt-[14px] grow'>
           <MenuItem href='/' iconName='overview_icon.png' title='Overview' />
@@ -19,25 +18,25 @@ const FullSideBar = () => {
 
       {/* payments section */}
       <div className='mb-[31px]'>
-        <p className='text-[11px] ml-[42px]'>Payments</p>
-        <ul className='pt-[14px] grow'>
+        <p className='text-[11px] ml-[20px] md:ml-[42px]'>Payments</p>
+        <ul className='pt-[14px] md:grow'>
           <MenuItem
-            href='/payments'
+            href='/all-payments'
             iconName='wallet_icon.png'
             title='All Payments'
           />
           <MenuItem
-            href='#'
+            href='/reconcilled-payments'
             iconName='wallet_icon2.png'
             title='Reconcilled Payments'
           />
           <MenuItem
-            href='#'
+            href='/unreconcilled-payments'
             iconName='wallet_icon3.png'
             title='Un - Reconcilled Payments'
           />
           <MenuItem
-            href='#'
+            href='/manual-settlement'
             iconName='manual_icon.png'
             title='Manual Settlement'
           />
@@ -46,8 +45,8 @@ const FullSideBar = () => {
 
       {/* orders section */}
       <div className='mb-[0px]'>
-        <p className='text-[11px] ml-[42px]'>Orders</p>
-        <ul className='py-4 grow'>
+        <p className='text-[11px] ml-[20px] md:ml-[42px]'>Orders</p>
+        <ul className='py-4 md:grow'>
           <MenuItem href='#' iconName='order_icon.png' title='All Orders' />
           <MenuItem
             href='#'
@@ -59,19 +58,13 @@ const FullSideBar = () => {
             iconName='order_icon3.png'
             title='Reconcilled Orders'
           />
-          <MenuItem
-            href='#'
-            iconName='manual_icon.png'
-            title='Manual Settlement'
-          />
-          
         </ul>
       </div>
 
       {/* orders section */}
       <div className=''>
         {/* <p className='text-[11px] ml-[42px]'>Orders</p> */}
-        <ul className='grow'>
+        <ul className='md:grow'>
           <MenuItem
             href='#'
             iconName='merchant_icon.png'
