@@ -33,7 +33,7 @@ const MyCustomSelect = ({
             toggleDropdown();
           }}
         >
-          <p className='text-[13px] text-[#414042]'>
+          <p className='text-[13px] text-[#414042] select-none'>
             {value || defaultValue?.value}
           </p>
           {!!icon && icon}
@@ -52,9 +52,14 @@ const MyCustomSelect = ({
                   setValue(op.value);
                   toggleDropdown();
                 }}
-                className={cn('bg-white  hover:bg-[#F4F4F4] h-[33px] w-[150px] pl-[16px] pr-[13px] py-2 flex items-center justify-between cursor-pointer', styles)}
+                className={cn(
+                  "bg-white  hover:bg-[#F4F4F4] h-[33px] w-[150px] pl-[16px] pr-[13px] py-2 flex items-center justify-between cursor-pointer",
+                  styles
+                )}
               >
-                <p className='text-[13px] text-[#414042]'>{op.label}</p>
+                <p className='text-[13px] text-[#414042] select-none'>
+                  {op?.label}
+                </p>
               </div>
             );
           })}

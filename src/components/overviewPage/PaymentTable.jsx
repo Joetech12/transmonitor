@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCircle } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { payData } from "../../dummyDatas/paymentData";
 import TablePagination from "./TablePagination";
 import { formatPrice } from "../../lib/utils";
 
-const PaymentTable = ({ newArray }) => {
-  const [slice1, setSlice1] = useState("0");
-  const [slice2, setSlice2] = useState("10");
-  const [currentPage, setCurrentPage] = useState(1);
+const PaymentTable = ({
+  currentPage,
+  setCurrentPage,
+  setSlice2,
+  setSlice1,
+  slice1,
+  slice2,
+  newArray,
+  t1,
+t2,
+}) => {
+  // const [slice1, setSlice1] = useState("0");
+  // const [slice2, setSlice2] = useState("10");
+  // const [currentPage, setCurrentPage] = useState(1);
 
-  console.log({slice1, slice2})
   return (
     <div className='mt-[19px]'>
       <div className=' overflow-x-auto w-[500px] md:w-[650px] lg:w-full'>
@@ -94,6 +103,8 @@ const PaymentTable = ({ newArray }) => {
         setSlice1={setSlice1}
         setSlice2={setSlice2}
         slice2={slice2}
+        t1={t1}
+t2={t2}
       />
     </div>
   );

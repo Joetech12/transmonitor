@@ -93,12 +93,7 @@ const Navbar = () => {
                 GENERATE INVOICE
               </div>
             </li>
-            {/* <li onClick={() => {}}>
-              <Link to='/' className=''>
-                Overview
-              </Link>
-            </li>
-           */}
+          
           </ul>
         </div>
       </div>
