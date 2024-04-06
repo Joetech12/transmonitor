@@ -1,6 +1,19 @@
+import { useEffect, useState } from "react";
+import BigChart from "../../../public/images/big_chart.png";
+
 import SmallProgressCard from "./SmallProgressCard";
 
+console.log({ BigChart });
+
 const BigChartRow = () => {
+  const [showChart, setShowChart] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowChart(true);
+    }, 1000);
+  }, []);
+
   return (
     <div className='flex flex-col mt-[27px] space-y-[20px] xl:space-y-[0] xl:flex-row xl:items-center xl:space-x-[4px]'>
       {/* big chart */}
@@ -30,11 +43,15 @@ const BigChartRow = () => {
           </div>
         </div>
         <div className='w-full'>
-          <img
-            src='/images/big_chart.png'
-            className='object-contain w-full xl:w-fit xl:h-[236.96px]'
-            alt=''
-          />
+          {showChart ? (
+            <img
+              src='/images/big_chart.png'
+              className='object-contain w-[689px] xl:w-auto h-auto xl:h-[236.96px]'
+              alt=''
+            />
+          ) : (
+            <div className='skeleton w-auto  h-[100px] md:h-[150px] xl:w-[689px] xl:h-[236.96px] opacity-10'></div>
+          )}
         </div>
       </div>
       {/* smaller cards */}
