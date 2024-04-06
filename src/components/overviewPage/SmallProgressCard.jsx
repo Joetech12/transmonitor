@@ -12,10 +12,10 @@ const SmallProgressCard = ({
       <p className='text-[14px] font-bold'>{title}</p>
       <div className='relative'>
         <div
-          className={`bg-secondary h-[4px] rounded-[10px] w-[${value2}%] absolute top-0 z-[20]`}
+          className={`bg-secondary h-[4px] rounded-[10px] w-[80%] absolute top-0 z-[20]`}
         ></div>
         <div
-          className={`bg-accent h-[4px] rounded-[10px] w-[${totalValue}%] absolute top-0`}
+          className={`bg-accent h-[4px] rounded-[10px] w-[100%] absolute top-0`}
         ></div>
       </div>
       <p className='text-[14px]'>
