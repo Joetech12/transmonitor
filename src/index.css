@@ -25,9 +25,14 @@
   src: local("Segoe-UI"), url("./assets/fonts/Segoe-UI.ttf") format("truetype");
 }
 
-body {
-  @apply bg-base-100 font-primaryRegular text-neutral;
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  @apply bg-base-100 font-primaryRegular text-neutral overflow-x-hidden
+}
+
 
 .btn {
   @apply h-[20px];

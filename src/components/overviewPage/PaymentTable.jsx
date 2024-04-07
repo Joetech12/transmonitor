@@ -16,6 +16,8 @@ const PaymentTable = ({
   t1,
 t2,
 }) => {
+
+  
   // const [slice1, setSlice1] = useState("0");
   // const [slice2, setSlice2] = useState("10");
   // const [currentPage, setCurrentPage] = useState(1);

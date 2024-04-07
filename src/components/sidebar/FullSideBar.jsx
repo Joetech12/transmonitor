@@ -2,7 +2,7 @@ import MenuItem from "./MenuItem";
 
 const FullSideBar = () => {
   return (
-    <div className='min-h-screen h-screen bg-white shadow-md pt-[33px] sticky top-[60px]'>
+    <div className=' md:h-[100dvh] bg-white shadow-md pt-[33px] sticky top-[60px]'>
       <div className='ml-[30px] btn btn-secondary font-secondaryBold tracking-[0.2px] rounded-[30px] text-[12px] text-white  w-[163px] hidden lg:flex'>
         GENERATE INVOICE
       </div>

@@ -47,7 +47,10 @@ const PaymentRow = () => {
       );
       if (searchValue) {
         setNewArray(filteredData);
-      }else{
+        setSlice1("0");
+        setSlice2("10");
+        setCurrentPage(1);
+      } else {
         setNewArray(payData);
       }
     }, 300); // 300ms debounce delay
@@ -55,11 +58,12 @@ const PaymentRow = () => {
     return () => clearTimeout(timerId); // Cleanup function to clear the timeout
   }, [searchValue]);
 
-  // console.log({ selectValue, newArray, searchValue });
+  console.log({ selectValue, newArray, searchValue, slice1, slice2 });
 
   return (
     <div className=' mt-[43px]'>
       <p className='text-[36px] mb-[17px] text-base-300'>Payments</p>
+      {/* search headers */}
       <div className='flex items-center justify-between'>
         <div className='flex items-center'>
           <p className='text-[13px] mr-[20px] text-base-300'>Showing</p>
