@@ -17,9 +17,6 @@ const TablePagination = ({
   const itemsPerPage = 10; // Number of items per page
   const numberOfPages = calculateNumberOfPages(arrayLength, itemsPerPage);
 
- 
-  // console.log({ slice1, slice2, currentPage, numberOfPages });
-
   return (
     <div className='flex items-center justify-between mt-[26px]'>
       <p className='text-[13px] text-black '>

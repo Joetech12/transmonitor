@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import BigChart from "/images/big_chart.png";
 
 import SmallProgressCard from "./SmallProgressCard";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import MyCustomSelect from "../inputs/MyCustomSelect/MyCustomSelect";
 import { dateOptions } from "../../dummyDatas/inputData";
+import { payData } from "../../dummyDatas/paymentData";
 
 const BigChartRow = () => {
   const [showChart, setShowChart] = useState(false);
@@ -37,6 +37,16 @@ const BigChartRow = () => {
     }
   };
 
+  const totalPayment = payData?.length;
+
+  const pendingPayment = payData?.filter(
+    (pd) => pd.status === "Pending"
+  )?.length;
+
+  const ReconcilledPayment = payData?.filter(
+    (pd) => pd.status === "Reconcilled"
+  )?.length;
+
   const getChartIndex = () => {
     const filt = dateOptions?.findIndex((ind) => ind.value === selectValue);
     return filt;
@@ -56,8 +66,6 @@ const BigChartRow = () => {
     }, 1000);
     setIndexValue(chartIndex);
   }, []);
-
-  // console.log({ fg: chartIndex, indexValue });
 
   return (
     <div className='flex flex-col mt-[27px] space-y-[20px] xl:space-y-[0] xl:flex-row xl:items-center xl:space-x-[4px]'>
@@ -127,21 +135,21 @@ const BigChartRow = () => {
       <div className='flex flex-col space-y-[10px] lg:space-y-0 lg:flex-row lg:space-x-[10px] xl:space-x-0 xl:flex-col xl:space-y-[4px] grow '>
         <SmallProgressCard
           title='Orders'
-          value1='10'
+          value1={20}
           value1Name='Pending Orders'
-          value2='50'
+          value2={80}
           value2Name='Reconcilled Orders'
-          totalValue='60'
+          totalValue={100}
           totalValueName='Total Orders'
         />
         <SmallProgressCard
           title='Payments'
-          value1='20'
-          value1Name='Pending Orders'
-          value2='80'
-          value2Name='Reconcilled Orders'
-          totalValue='100'
-          totalValueName='Total Orders'
+          value1={pendingPayment}
+          value1Name='Pending Payments'
+          value2={ReconcilledPayment}
+          value2Name='Reconcilled Payments'
+          totalValue={totalPayment}
+          totalValueName='Total Payments'
         />
       </div>
     </div>
