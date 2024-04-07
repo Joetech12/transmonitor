@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import OutsideClickDetector from "./useOutsideClick";
+import React, { useState } from "react";
 import { cn } from "../../../lib/utils";
+import OutsideClickDetector from "./useOutsideClick";
 
 const MyCustomSelect = ({
   value,
@@ -53,7 +52,7 @@ const MyCustomSelect = ({
                   toggleDropdown();
                 }}
                 className={cn(
-                  "bg-white  hover:bg-[#F4F4F4] h-[33px] w-[150px] pl-[16px] pr-[13px] py-2 flex items-center justify-between cursor-pointer",
+                  ` ${value === op.value ? "bg-[#F4F4F4]" : "bg-white"} hover:bg-[#F4F4F4] h-[33px] w-[150px] pl-[16px] pr-[13px] py-2 flex items-center justify-between cursor-pointer`,
                   styles
                 )}
               >

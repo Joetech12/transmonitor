@@ -1,24 +1,16 @@
 import { useEffect, useState } from "react";
-
-import SmallProgressCard from "./SmallProgressCard";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import MyCustomSelect from "../inputs/MyCustomSelect/MyCustomSelect";
 import { dateOptions } from "../../dummyDatas/inputData";
 import { payData } from "../../dummyDatas/paymentData";
+import { getCurrentDate } from "../../lib/utils";
+import MyCustomSelect from "../inputs/MyCustomSelect/MyCustomSelect";
+import SmallProgressCard from "./SmallProgressCard";
 
 const BigChartRow = () => {
   const [showChart, setShowChart] = useState(false);
 
-  const [selectValue, setSelectValue] = useState("1 Jan - 1 Dec");
+  const [selectValue, setSelectValue] = useState("1 Jan - 1 Jun");
   const [indexValue, setIndexValue] = useState(0);
-
-  let currentDate = new Date();
-
-  let options = {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  };
 
   const selectChart = () => {
     switch (selectValue) {
@@ -53,8 +45,6 @@ const BigChartRow = () => {
   };
   const chartIndex = getChartIndex();
 
-  const formattedDate = currentDate.toLocaleDateString("en-US", options);
-
   useEffect(() => {
     const filt = dateOptions?.find((ind) => ind.index === indexValue);
     setSelectValue(filt?.value);
@@ -71,10 +61,9 @@ const BigChartRow = () => {
     <div className='flex flex-col mt-[27px] space-y-[20px] xl:space-y-[0] xl:flex-row xl:items-center xl:space-x-[4px]'>
       {/* big chart */}
       <div className='bg-white overflow-hidden pt-[26px] h-auto shrink-0  lg:h-[329px] flex flex-col justify-between'>
-        <div className='flex flex-col space-y-[10px] md:space-y-0 md:flex-row  md:items-center md:justify-between mb-[38px] xl:mb-[0px] mx-[20px] lg:ml-[34px] lg:mr-[30.76px]'>
+        <div className='flex flex-col space-y-[10px] md:space-y-0 md:flex-row   md:items-center md:justify-between mb-[38px] xl:mb-[0px] mx-[20px] lg:ml-[34px] lg:mr-[30.76px]'>
           <p className='font-bold text-[18px] text-base-200'>
-            Today: {formattedDate}
-            {/* Today: 5, Aug 2018 */}
+            Today: {getCurrentDate()}
           </p>
           <div className='flex items-center space-x-[39.23px]'>
             <MyCustomSelect
